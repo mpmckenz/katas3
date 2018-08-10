@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="kata.css">
+    <title>Katas 3</title>
+</head>
+
+<body>
+    <h1>Katas 3</h1>
+    <div id="answer">
+    </div>
+    <script>
+
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+
+        let Reuse = document.getElementById("answer")
+
+        // Problem 1
+
+        let headonetext = document.createElement("div")
+        headonetext.innerHTML = "<h3>1. Display the numbers from 1 to 20.</h3>"
+        Reuse.appendChild(headonetext)
+
+        let answer1 = document.createElement("div")
+
+        Reuse.appendChild(answer1)
+
+        for (let counter = 1; counter < 21; counter++) {
+            answer1 = document.createTextNode(counter + ", ")
+            Reuse.appendChild(answer1);
+        }
+
+        // Problem 2
+
+        let headtwotext = document.createElement("div")
+        headtwotext.innerHTML = "<h3>2. Display the even numbers from 1 to 20.</h3>"
+        Reuse.appendChild(headtwotext)
+
+        let answer2 = document.createElement("div")
+
+        Reuse.appendChild(answer2)
+
+        for (let counter = 0; counter < 21; counter++)
+            if ((counter % 2) == 0) {
+                answer2 = document.createTextNode(counter + ", ")
+                Reuse.appendChild(answer2)
+            }
+
+        // Problem 3
+
+        let headthreetext = document.createElement("div")
+        headthreetext.innerHTML = "<h3>3. Display the ODD numbers from 1 to 20. </h3>"
+        Reuse.appendChild(headthreetext)
+
+        let answer3 = document.createElement("div")
+
+        for (let counter = 0; counter < 20; counter++)
+            if ((counter % 2) == 1) {
+                answer3 = document.createTextNode(counter + ", ")
+                Reuse.appendChild(answer3)
+            }
+
+        // Problem 4
+
+        let headfourtext = document.createElement("div")
+        headfourtext.innerHTML = "<h3>4. Display the multiples of 5 up to 100.</h3>"
+        Reuse.appendChild(headfourtext)
+
+        let answer4 = document.createElement("div")
+
+        for (let counter = 5; counter < 101; counter += 5) {
+            answer4 = document.createTextNode(counter + ", ")
+            Reuse.appendChild(answer4)
+        }
+
+        // Problem 5
+
+        let headfivetext = document.createElement("div")
+        headfivetext.innerHTML = "<h3>5. Display the square numbers up to 100</h3>"
+        Reuse.appendChild(headfivetext)
+
+        let answer5 = document.createElement("div")
+
+        for (let counter = 1; counter <= 10; counter = counter + 1) {
+            answer5 = document.createTextNode((counter * counter) + ", ")
+            Reuse.appendChild(answer5)
+        }
+
+        // Problem 6
+
+        let headsixtext = document.createElement("div")
+        headsixtext.innerHTML = "<h3>6. Display the numbers counting backwards from 20 to 1.</h3>"
+        Reuse.appendChild(headsixtext)
+
+        let answer6 = document.createElement("div")
+
+        for (let counter = 20; counter > 0; counter--) {
+            answer6 = document.createTextNode(counter + ", ")
+            Reuse.appendChild(answer6)
+        }
+
+        // Problem 7
+
+        let headseventext = document.createElement("div")
+        headseventext.innerHTML = "<h3>7. Display the even numbers counting backwards from 20</h3>"
+        Reuse.appendChild(headseventext)
+
+        let answer7 = document.createElement("div")
+
+        for (let counter = 20; counter > 0; counter--)
+            if ((counter % 2) == 0) {
+                answer7 = document.createTextNode(counter + ", ")
+                Reuse.appendChild(answer7)
+            }
+
+        // Problem 8
+
+        let headeighttext = document.createElement("div")
+        headeighttext.innerHTML = "<h3>8. Display the odd numbers from 20 to 1, counting backwards. </h3>"
+        Reuse.appendChild(headeighttext)
+
+        let answer8 = document.createElement("div")
+
+        for (let counter = 20; counter > 0; counter--)
+            if ((counter % 2) == 1) {
+                answer8 = document.createTextNode(counter + ", ")
+                Reuse.appendChild(answer8)
+            }
+
+        // Problem 9
+
+        let headninetext = document.createElement("div")
+        headninetext.innerHTML = "<h3>9. Display the multiples of 5, counting down from 100.</h3>"
+        Reuse.appendChild(headninetext)
+
+        let answer9 = document.createElement("div")
+
+        for (let counter = 100; counter > 0; counter -= 5) {
+            answer9 = document.createTextNode(counter + ", ")
+            Reuse.appendChild(answer9)
+        }
+
+        // Problem 10
+
+        let headtentext = document.createElement("div")
+        headtentext.innerHTML = "<h3>10. Display the square numbers, counting down from 100.</h3>"
+        Reuse.appendChild(headtentext)
+
+        let answer10 = document.createElement("div")
+
+        for (let counter = 10; counter >= 1; counter = counter - 1) {
+            answer10 = document.createTextNode((counter * counter) + ", ")
+            Reuse.appendChild(answer10)
+        }
+
+        // Problem 11
+
+        let headeleventext = document.createElement("div")
+        headeleventext.innerHTML = "<h3>11. Display the 20 elements of sampleArray.</h3>"
+        Reuse.appendChild(headeleventext)
+
+        let answer11 = document.createElement("div")
+
+        answer11 = document.createTextNode(sampleArray.toString(answer + ", "));
+        Reuse.appendChild(answer11)
+
+        // Problem 12
+
+        let headtwelvetext = document.createElement("div")
+        headtwelvetext.innerHTML = "<h3>12. Display all the even numbers contained in sampleArray.</h3>"
+        Reuse.appendChild(headtwelvetext)
+
+        let answer12 = document.createElement("div")
+
+        for (let i = 0; i < 20; i++) {
+            if ((sampleArray[i] % 2) == 0) {
+                answer12 = document.createTextNode(sampleArray[i] + ", ")
+                Reuse.appendChild(answer12)
+            }
+        }
+
+        // Problem 13
+
+        let headthirteentext = document.createElement("div")
+        headthirteentext.innerHTML = "<h3>13. Display all the odd numbers contained in sampleArray.</h3>"
+        Reuse.appendChild(headthirteentext)
+
+        let answer13 = document.createElement("div")
+
+        for (let i = 0; i < 20; i++)
+            if ((sampleArray[i] % 2) == 1) {
+                answer13 = document.createTextNode(sampleArray[i] + ", ")
+                Reuse.appendChild(answer13)
+            }
+
+        // Problem 14
+
+        let headfourteentext = document.createElement("div")
+        headfourteentext.innerHTML = "<h3>14. Display the square of each element in sampleArray.</h3>"
+        Reuse.appendChild(headfourteentext)
+
+        let answer14 = document.createElement("div")
+
+        for (let i = 0; i <= sampleArray.length; i++) {
+            answer14 = document.createTextNode((sampleArray[i] * sampleArray[i]) + ", ")
+            Reuse.appendChild(answer14)
+        }
+
+        // Problem 15
+
+        let headfifteentext = document.createElement("div")
+        headfifteentext.innerHTML = "<h3>15. Display the sum of all the numbers from 1 to 20.</h3>"
+        Reuse.appendChild(headfifteentext)
+
+        let answer15 = document.createElement("div")
+
+        const prob15 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+        const sum = (a, b) => a + b
+        const totalsum = prob15.reduce(sum)
+
+        for (let i = 0; i < 1; i++) {
+
+            answer15 = document.createTextNode(totalsum)
+            Reuse.appendChild(answer15)
+        }
+
+        // Problem 16
+
+        let headsixteentext = document.createElement("div")
+        headsixteentext.innerHTML = "<h3>16. Display the sum of all the elements in sampleArray.</h3>"
+        Reuse.appendChild(headsixteentext)
+
+        let answer16 = document.createElement("div")
+
+        const samplesum = (a, b) => a + b
+        const totalsamplesum = sampleArray.reduce(samplesum)
+        for (let i = 0; i < 1; i++) {
+            answer16 = document.createTextNode(totalsamplesum)
+            Reuse.appendChild(answer16)
+        }
+
+        // Problem 17
+
+        let headseventeentext = document.createElement("div")
+        headseventeentext.innerHTML = "<h3>17. Display the smallest element in sampleArray.</h3>"
+        Reuse.appendChild(headseventeentext)
+
+        let answer17 = document.createElement("div")
+
+        let min1 = Math.min.apply(null, sampleArray)
+        answer17 = document.createTextNode(min1)
+        Reuse.appendChild(answer17)
+
+
+        // Problem 18
+
+        let headeighteentext = document.createElement("div")
+        headeighteentext.innerHTML = "<h3>18. Display the largest element in sampleArray.</h3>"
+        Reuse.appendChild(headeighteentext)
+
+        let answer18 = document.createElement("div")
+
+        let max1 = Math.max.apply(null, sampleArray)
+        answer18 = document.createTextNode(max1)
+        Reuse.appendChild(answer18)
+
+
+        // Problem 19
+
+        let headnineteentext = document.createElement("div")
+        headnineteentext.innerHTML = "<h3>19. Display 20 solid gray rectangles, each 20px high and 100px wide.</h3>"
+        Reuse.appendChild(headnineteentext)
+
+        let box = document.createElement("div")
+
+        for (let i = 0; i < 20; i++) {
+            let box = document.createElement("div")
+            box.style.width = "100px";
+            box.style.height = "20px";
+            box.style.marginTop = "1px";
+            box.className = "rectangle";
+            Reuse.appendChild(box)
+        }
+
+        // Problem 20
+
+        let headtwentytext = document.createElement("div")
+        headtwentytext.innerHTML = "<h3>20. Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px</h3>"
+        Reuse.appendChild(headtwentytext)
+
+        let answer20 = document.createElement("div")
+
+        for (let i = 0; i < 100; i+= 5) {
+            let box = document.createElement("div")
+            box.style.width = 105 + i + "px";
+            box.style.height = "20px";
+            box.style.marginTop = "1px";
+            box.className = "rectangle";
+            Reuse.appendChild(box)
+        }
+
+        // Problem 21
+
+        let headtwentyonetext = document.createElement("div")
+        headtwentyonetext.innerHTML = "<h3>21. Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.</h3>"
+        Reuse.appendChild(headtwentyonetext)
+
+        // let answer21 = document.createElement("div")
+
+        for (let i = 0; i <= 19; i++) {
+            let box = document.createElement("div")
+            box.style.width = sampleArray[i] + "px";
+            box.style.height = "20px";
+            box.style.marginTop = "1px";
+            box.className = "rectangle";
+            Reuse.appendChild(box)
+            }
+
+        // // Problem 22
+
+        let headtwentytwotext = document.createElement("div")
+        headtwentytwotext.innerHTML = "<h3>22. As in #21, but alternate colors so that every other rectangle is red.</h3>"
+        Reuse.appendChild(headtwentytwotext)
+
+        // let answer22 = document.createElement("div")
+
+        for (let i = 0; i <= 19; i++) {
+            let box = document.createElement("div");
+            box.style.backgroundColor = "gray"
+            box.style.width = sampleArray[i] + "px";
+            box.style.height = "20px";
+            box.style.marginTop = "1px";
+            box.className = "rectangle";
+            if ((i % 2) == 1) {
+            box.style.backgroundColor = "red";
+            }
+            Reuse.appendChild(box)
+            }
+
+
+        // // Problem 23
+
+        let headtwentythreetext = document.createElement("div")
+        headtwentythreetext.innerHTML = "<h3>23. As in #21, but color the rectangles with even widths red. </h3>"
+        Reuse.appendChild(headtwentythreetext)
+
+        // let answer23 = document.createElement("div")
+
+        for (let i = 0; i <= 19; i++) {
+            let box = document.createElement("div");
+            box.style.backgroundColor = "gray"
+            box.style.width = sampleArray[i] + "px";
+            box.style.height = "20px";
+            box.style.marginTop = "1px";
+            box.className = "rectangle";
+            if ((sampleArray[i] % 2) == 0) {
+            box.style.backgroundColor = "red";
+            }
+            Reuse.appendChild(box)
+            }
+
+    </script>
+</body>
+
+</html>
